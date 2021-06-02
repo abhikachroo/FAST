@@ -1,14 +1,26 @@
 package stepDefs;
+
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import hooks.hooks;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.common;
  
-public class Web {
- 
-	
+public class Web extends common {
+	public WebDriver driver;
+		
 	@Given("Precondition is given")
 	public void precondition_is_given() {
-	   System.out.println("Precondition is given");
+		
+		System.out.println("Precondition is given");
+		
 	}
  
 	@When("Something is done")

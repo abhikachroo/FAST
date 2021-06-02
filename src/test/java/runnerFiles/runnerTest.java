@@ -13,10 +13,11 @@ import com.vimalselvam.cucumber.listener.ExtentCucumberFormatter;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features",
+@CucumberOptions(features = "src/test/resources/features/",
 //plugin = { "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 glue = {"stepDefs","hooks"},
-tags = ("@API"),
+tags = 	"@Web or @API",
+plugin= {"pretty","html:target/Report/report.html"},
 monochrome=true,
 dryRun = false
 )
