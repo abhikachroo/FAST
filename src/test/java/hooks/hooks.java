@@ -14,18 +14,13 @@ import utilities.common;
 
 public class hooks extends common {
 	public WebDriver driver;
-	
-	 //prop= new Properties();
-	//FileInputStream fis=new FileInputStream("D:\\workspace\\FAST\\src\\test\\resources\\properties.properties");
-			
+				
   @Before ("@Web")
    public void setUp() throws IOException{ 
       System.out.println("Before Web Hooks");      
       driver =initializeDriver();
-      driver.get(prop.getProperty("url"));
-      System.out.println("URL is: "+prop.getProperty("url"));
-      
-      
+      driver.get(prop.getProperty("url"));   
+          
       
    }
    @Before("@Mobile") 
@@ -35,8 +30,6 @@ public class hooks extends common {
    
    @After("@Web") 
    public void tearDown(){ 
-	  //WebDriver driver = new ChromeDriver();
-	   //driver.quit();
 	  driver.close();
       System.out.print("After Hooks"); 
    } 
