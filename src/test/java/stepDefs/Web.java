@@ -3,6 +3,7 @@ package stepDefs;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,11 +15,12 @@ import io.cucumber.java.en.When;
 import utilities.common;
  
 public class Web extends common {
-	public WebDriver driver;
-		
+	WebDriver driver = common.driver;
+	
+	    	
 	@Given("Precondition is given")
 	public void precondition_is_given() {
-		
+		driver.findElement(By.xpath("//a[text()='Courses']")).click();
 		System.out.println("Precondition is given");
 		
 	}
