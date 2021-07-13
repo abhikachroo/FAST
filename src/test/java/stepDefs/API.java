@@ -2,6 +2,8 @@ package stepDefs;
 
 
  
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert; 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,6 +15,8 @@ import io.restassured.specification.RequestSpecification;
 
 
 public class API {
+	
+	//private static Logger log = LogManager.getLogger(Web.class.getName());
 	
 	RequestSpecification request;
 	private static Response response;
@@ -36,6 +40,12 @@ public class API {
 		    	System.out.println(response.getStatusCode());
 		        //System.out.println("response : " + response.asPrettyString());
 		        Assert.assertEquals(response.getStatusCode(), 200);
+		       // log.debug("I am debugging");
+				//log.error("print error message using Log4j");
+				//log.error("print error message using Log4j");
+				//log.fatal("print error message using Log4j");
+				//log.debug("I am debugging");
+				//log.info("I am debugging info");
 	
 	}
 }

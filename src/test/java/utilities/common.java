@@ -64,7 +64,6 @@ public class common {
 	//}
 
 	public static WindowsDriver<WindowsElement> initializeWDriver() throws IOException {
-		// TODO Auto-generated method stub
 		DesiredCapabilities options = new DesiredCapabilities();
 		//options.setCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
 		options.setCapability("app", "C:\\Windows\\System32\\notepad.exe");		

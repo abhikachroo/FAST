@@ -1,11 +1,11 @@
 @Web
 Feature: Web Application Test Scenarios
  
-@First
-Scenario: This is first scenario
-    Given Precondition is given
-    When Something is done
-    Then Something is expected
+@FirstWeb
+Scenario: Add to Cart Functionality
+    Given User clicks on Add to Cart button
+    When User clicks on Cart Image and Checkout button
+    Then validate user is navigated to Cart details page
     
 @Second    
 Scenario: This is second scenario
