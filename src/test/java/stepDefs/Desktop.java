@@ -1,5 +1,6 @@
 package stepDefs;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -30,7 +31,9 @@ public class Desktop extends common {
 	 }
 	
 	@Given("User cliked Help in Notepad app")
-	public void heloInNotepad() throws MalformedURLException {
+	public void helpInNotepad() throws IOException {
+		
+
 		
 		
 		wdriver.findElementByName("Help").click();		
@@ -52,7 +55,7 @@ public class Desktop extends common {
 	public void validateNotepad() throws MalformedURLException {
 		
 		System.out.println("Notepad Validations");
-		
+		 wdriver.quit();		
 	}
 
 

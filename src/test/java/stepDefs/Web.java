@@ -41,7 +41,7 @@ public class Web extends common {
 		
 	}
  
-	@Then("validate user is navigated to Cart details page")
+	@Then("Validate user is navigated to Cart details page")
 	public void Validation() throws InterruptedException {
 		pg.getCheckOutButton().click();
 		System.out.println("Clicked on Checkout Button");
@@ -60,15 +60,6 @@ public class Web extends common {
 		//log.info("I am debugging info");
 	}
  
-	@When("Something is done again")
-	public void something_is_done_again() {
-	    System.out.println("Something is done again - 2nd Scenario");
-	}
- 
-	@Then("Something is expected again")
-	public void something_is_expected_again() {
-	    System.out.println("Something is expected again - 2nd Scenario");
-	}
- 
+
  
 }
