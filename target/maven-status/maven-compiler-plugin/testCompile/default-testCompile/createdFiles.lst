@@ -1,6 +1,6 @@
 stepDefs\Desktop.class
+hooks\hooks.class
 stepDefs\Web.class
 utilities\common.class
 runnerFiles\runnerTest.class
-hooks\hooks.class
 stepDefs\API.class

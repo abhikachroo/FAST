@@ -13,6 +13,8 @@ import hooks.hooks;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.WindowsElement;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import utilities.common;
 
 public class Desktop extends common {
@@ -27,25 +29,31 @@ public class Desktop extends common {
 	 return date.toString();
 	 }
 	
-	@Given("First Desktop Scenario")
-	public void first_desktopscenario() throws MalformedURLException {
+	@Given("User cliked Help in Notepad app")
+	public void heloInNotepad() throws MalformedURLException {
 		
 		
 		wdriver.findElementByName("Help").click();		
 		wdriver.findElementByName("About Notepad").click();
-		wdriver.findElementByName("OK").click();
-		wdriver.findElementByClassName("Edit").sendKeys(getDate());
-		wdriver.findElementByClassName("Edit").clear();
-		
-		System.out.println("First Desktop Scenario");
+		wdriver.findElementByName("OK").click();		
+		System.out.println("User clicked About Option In Notepad");
 		
 	}
-	@Given("Second Desktop Scenario")
-	public void second() {
+	
+	@When("User enters current date in Notepad")
+	public void enterTextInNotepad() throws MalformedURLException {
+		
 		wdriver.findElementByClassName("Edit").sendKeys(getDate());
-		wdriver.findElementByClassName("Edit").clear();	
-		System.out.println("Second Desktop Scenario");
+		wdriver.findElementByClassName("Edit").clear();		
+		System.out.println("User entered Current Date");
 		
 	}
+	@Then("Validate Notepad")
+	public void validateNotepad() throws MalformedURLException {
+		
+		System.out.println("Notepad Validations");
+		
+	}
+
 
 }
