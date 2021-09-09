@@ -10,9 +10,9 @@ public class PageObjects {
 	
 	//All Page Objects should go here using locators
 	
-	By AddToCartButton=By.xpath("//button[text()='ADD TO CART']");
-	By CartImage=By.xpath("//img[@alt='Cart']");
-	By CheckOutButton = By.xpath("//button[text()='PROCEED TO CHECKOUT']");
+	private By AddToCartButton=By.xpath("//button[text()='ADD TO CART']");
+	private By CartImage=By.xpath("//img[@alt='Cart']");
+	private By CheckOutButton = By.xpath("//button[text()='PROCEED TO CHECKOUT']");
 
 
 	// This is constructor to initiate driver

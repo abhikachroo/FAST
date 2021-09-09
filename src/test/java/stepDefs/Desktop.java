@@ -55,7 +55,7 @@ public class Desktop extends common {
 	public void validateNotepad() throws MalformedURLException {
 		
 		System.out.println("Notepad Validations");
-		 wdriver.quit();		
+		 		
 	}
 
 

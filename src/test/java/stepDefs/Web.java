@@ -22,7 +22,7 @@ public class Web extends common {
 	WebDriver driver = common.driver;
 	PageObjects pg = new PageObjects(driver);
 	private static Logger log = LogManager.getLogger(Web.class.getName());
-
+	
 	
 	    	
 	@Given("User clicks on Add to Cart button")
@@ -46,20 +46,14 @@ public class Web extends common {
 		pg.getCheckOutButton().click();
 		System.out.println("Clicked on Checkout Button");
 		Thread.sleep(4000);
+		/*
+		log.debug("I am debugging");
+		log.error("print error message using Log4j");
+		log.fatal("print error message using Log4j");		
+		log.info("I am debugging info");
+		log.warn("I am warn");
+		*/
 	}
  
-	@Given("Another precondition is given")
-	public void another_precondition_is_given() {
-	   System.out.println("Another precondition is given");
-
-		//log.debug("I am debugging");
-		//log.error("print error message using Log4j");
-		//log.error("print error message using Log4j");
-		//log.fatal("print error message using Log4j");
-		//log.debug("I am debugging");
-		//log.info("I am debugging info");
-	}
- 
-
- 
+	
 }

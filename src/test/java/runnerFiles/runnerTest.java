@@ -16,8 +16,8 @@ import com.vimalselvam.cucumber.listener.ExtentCucumberFormatter;
 @CucumberOptions(features = "src/test/resources/features/",
 //plugin = { "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 glue = {"stepDefs","hooks"},
-tags = 	"@Web or @API or @Desktop",
-//tags=("@Desktop"),
+//tags = 	"@Web or @API or @Desktop",
+tags=("@Mobile"),
 plugin= {"pretty","html:target/Report/report.html","json:target/Report/report.json"},
 monochrome=true,
 dryRun = false
