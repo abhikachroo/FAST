@@ -30,14 +30,6 @@ public class MobileAndroid extends common {
 				System.out.println("Mobile App launched");
 	}
  
-	@When("User clicks on Cart Image and Checkout button")
-	public void clickCartImage() throws InterruptedException {
-				
-	}
- 
-	@Then("Validate user is navigated to Cart details page")
-	public void Validation() throws InterruptedException {
-			}
  
 	
 }
