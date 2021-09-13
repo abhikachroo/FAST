@@ -32,31 +32,31 @@ public class common {
 	public static WebDriver initializeDriver() throws IOException
 	{
 		
-	 prop= new Properties();
+	// prop= new Properties();
 	 
-	 FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties.properties");
+	// FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties.properties");
 
-	prop.load(fis);
+	//prop.load(fis);
 	// Thiis takes browser namr from Maven test command - mvn test -Dbrowser=chrome. And this would be sent thru jenkins build parameter
 	//String browserName=System.getProperty("browser");
-	String browserName=prop.getProperty("browser");
+	//String browserName=prop.getProperty("browser");
 	
-	if(browserName.equals("chrome"))
-	{
-		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+	//if(browserName.equals("chrome"))
+	//{
+		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/driver/chromedriver.exe");
 		driver= new ChromeDriver();
 			
 		
-	}
-	else if (browserName.equals("firefox"))
-	{
-		// driver= new FirefoxDriver();
+	//}
+	//else if (browserName.equals("firefox"))
+	//{
+	//	// driver= new FirefoxDriver();
 		
-	}
-	else if (browserName.equals("IE"))
-	{
+	//}
+	//else if (browserName.equals("IE"))
+	//{
 		//		IE code
-	}
+	//}
 
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	return driver;
