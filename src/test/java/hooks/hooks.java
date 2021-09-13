@@ -28,7 +28,7 @@ public class hooks extends common {
    public void setUp() throws IOException{ 
       System.out.println("Before Web Hooks");      
       driver =initializeDriver();
-      driver.get(prop.getProperty("url"));	
+      driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");	
      }
   
    @Before("@Mobile") 
