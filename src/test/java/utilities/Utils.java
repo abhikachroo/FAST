@@ -40,7 +40,7 @@ public class Utils {
 	public static String getGlobalValue(String key) throws IOException
 	{
 		Properties prop =new Properties();
-		FileInputStream fis =new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties.properties");
+		FileInputStream fis =new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties.properties");
 		prop.load(fis);
 		return prop.getProperty(key);
 	
