@@ -4,6 +4,7 @@ import java.io.File;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -32,8 +33,9 @@ public class hooks extends common {
      }
   
    @Before("@Mobile") 
-   public void setUp1(){ 
+   public void setUp1() throws MalformedURLException{ 
       System.out.println("Before Mobile Hooks"); 
+      mdriver =initializeMobileDriver();
    }
    
    @After("@Web") 

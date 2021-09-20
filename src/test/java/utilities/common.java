@@ -79,11 +79,12 @@ public class common {
 public static AndroidDriver<AndroidElement> initializeMobileDriver() throws MalformedURLException{
 		DesiredCapabilities cap = new DesiredCapabilities();
 		File appDir = new File("driver");
-		File app=new File(appDir, "ApiDemos-debug.apk");
+		File app=new File(System.getProperty("user.dir")+"\\driver\\ApiDemos-debug.apk");
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_Emulator");
 		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		AndroidDriver<AndroidElement> mdriver=new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		mdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return mdriver;	 
 				
 	}
