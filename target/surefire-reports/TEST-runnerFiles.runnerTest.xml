@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="runnerFiles.runnerTest" time="59.933" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="runnerFiles.runnerTest" time="31.101" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -25,9 +25,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf9064413270528155436.tmp"/>
+    <property name="classworlds.conf" value="D:\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf13271029551941281546.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Users\ak59417\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Users/ak59417/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/ak59417/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\nodejs\;C:\Program Files\Gauge\bin;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\nodejs;C:\Users\ak59417\AppData\Local\Android\Sdk;C:\Users\ak59417\AppData\Local\Android\Sdk\tools;C:\Users\ak59417\AppData\Local\Android\Sdk\tools\bin;C:\Users\ak59417\AppData\Local\Android\Sdk\build-tools\31.0.0;C:\Users\ak59417\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk-17;C:\Users\ak59417\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\ak59417\AppData\Local\Programs\Python\Python39\;C:\Users\ak59417\AppData\Local\Microsoft\WindowsApps;C:\Users\ak59417\AppData\Local\Programs\Git\cmd;C:\Users\ak59417\AppData\Roaming\npm;C:\Users\ak59417\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\bin;;C:\Users\ak59417\AppData\Local\Android\Sdk\tools;C:\Users\ak59417\AppData\Local\Android\Sdk;C:\Users\ak59417\AppData\Local\Android\Sdk\build-tools\31.0.0;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Users\ak59417\AppData\Local\Android\Sdk\tools\bin;C:\windowssystem32;C:\Users\ak59417\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\Java\jdk-17;;C:\windows\System32;;."/>
+    <property name="java.library.path" value="C:\Users\ak59417\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Users/ak59417/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/ak59417/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\nodejs\;C:\Program Files\Gauge\bin;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\nodejs;C:\Users\ak59417\AppData\Local\Android\Sdk;C:\Users\ak59417\AppData\Local\Android\Sdk\tools;C:\Users\ak59417\AppData\Local\Android\Sdk\tools\bin;C:\Users\ak59417\AppData\Local\Android\Sdk\build-tools\31.0.0;C:\Users\ak59417\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk-17;C:\Program Files\dotnet\;C:\Users\ak59417\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\ak59417\AppData\Local\Programs\Python\Python39\;C:\Users\ak59417\AppData\Local\Microsoft\WindowsApps;C:\Users\ak59417\AppData\Local\Programs\Git\cmd;C:\Users\ak59417\AppData\Roaming\npm;C:\Users\ak59417\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\bin;;C:\Users\ak59417\AppData\Local\Android\Sdk\tools;C:\Users\ak59417\AppData\Local\Android\Sdk;C:\Users\ak59417\AppData\Local\Android\Sdk\build-tools\31.0.0;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Users\ak59417\AppData\Local\Android\Sdk\tools\bin;C:\windowssystem32;C:\Users\ak59417\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\Java\jdk-17;;C:\windows\System32;;."/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="59.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -56,92 +56,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Desktop feature" name="Notepad Validations" time="59.933">
-    <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MKD-CORP-BCP006&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files\Microsoft ..., javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 43E0FDF1-2F1C-4F07-B509-EEA32BEC6EB1
-*** Element info: {Using=name, value=New E-mail}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MKD-CORP-BCP006&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files\Microsoft ..., javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 43E0FDF1-2F1C-4F07-B509-EEA32BEC6EB1
-*** Element info: {Using=name, value=New E-mail}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElement(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:117)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElementByName(WindowsDriver.java:1)
-	at stepDefs.Desktop.helpInNotepad(Desktop.java:32)
-	at ✽.User cliked Help in Notepad app(file:///D:/workspace/FAST/src/test/resources/features/Desktop.feature:6)
-</error>
-    <system-out>
-@Desktop
-Scenario: Notepad Validations              # src/test/resources/features/Desktop.feature:5
-Before Hooks - Start WebAppDriver      org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MKD-CORP-BCP006&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files\Microsoft ..., javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 43E0FDF1-2F1C-4F07-B509-EEA32BEC6EB1
-*** Element info: {Using=name, value=New E-mail}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElement(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:117)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElementByName(WindowsDriver.java:1)
-	at stepDefs.Desktop.helpInNotepad(Desktop.java:32)
-	at âœ½.User cliked Help in Notepad app(file:///D:/workspace/FAST/src/test/resources/features/Desktop.feature:6)
-
-  When User enters current date in Notepad # stepDefs.Desktop.enterTextInNotepad()
-  Then Validate Notepad                    # stepDefs.Desktop.validateNotepad()
-After Hooks</system-out>
-  </testcase>
+  <testcase classname="Desktop feature" name="Outlook Validations" time="31.101"/>
 </testsuite>

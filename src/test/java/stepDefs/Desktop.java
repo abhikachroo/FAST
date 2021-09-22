@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -26,37 +29,33 @@ public class Desktop extends common {
 		wdriver=common.initializeWDriver();
 	}
 
-	@Given("User cliked Help in Notepad app")
-	public void helpInNotepad() throws IOException, InterruptedException {
+	@Given("User clciks the New Email Button")
+	public void clcikNewEmail() throws IOException, InterruptedException {
 		
-		 System.out.println("Outlook Opened");	      
-	     //wdriver.findElementByName("New E-mail").click();
-	     wdriver.findElement(By.xpath("//*[text()='New Email']")).click();
-	       
-		
-	
-		
-		
-		//wdriver.findElementByName("Help").click();		
-		//wdriver.findElementByName("About Notepad").click();
-		//wdriver.findElementByName("OK").click();		
-		//System.out.println("User clicked About Option In Notepad");
-		
+		 System.out.println("Outlook Opened");    
+	     wdriver.findElementByName("New Email").click();
+	     Thread.sleep(5000);   
+	  
 		
 	}
 	
-	@When("User enters current date in Notepad")
-	public void enterTextInNotepad() throws MalformedURLException {
-		
-		//wdriver.findElementByClassName("Edit").sendKeys(getDate());
-		//wdriver.findElementByClassName("Edit").clear();		
-		//System.out.println("User entered Current Date");
+	@When("User enters the Subject")
+	public void enterTextInSubject() throws MalformedURLException, InterruptedException {
+		Set<String> windowHandles = wdriver.getWindowHandles();
+	       List<String> windowHandlesList = new ArrayList<>(windowHandles); //Set to List Conversion	
+	        wdriver.switchTo().window(windowHandlesList.get(0));
+	        Thread.sleep(2000); 	      
+	        wdriver.findElementByAccessibilityId("4101").sendKeys("This is Test Subject");
+	   
+	        Thread.sleep(2000);
+
 		
 	}
-	@Then("Validate Notepad")
-	public void validateNotepad() throws MalformedURLException {
-		
-		//System.out.println("Notepad Validations");
+	@Then("Validate user can enter Message")
+	public void validateBody() throws MalformedURLException {
+        wdriver.findElementByName("Message").sendKeys("This is Test Message Body");//4159
+       // wdriver.quit();
+	
 		 		
 	}
 
