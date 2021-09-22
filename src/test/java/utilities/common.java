@@ -5,8 +5,13 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -62,7 +67,7 @@ public class common {
 	return driver;
 	}
 
-
+/*
 	public static WindowsDriver<WindowsElement> initializeWDriver() throws IOException {
 		
 		 
@@ -75,7 +80,41 @@ public class common {
 		wdriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);	
 		return wdriver;		
 	}
+*/
+	
+public static WindowsDriver<WindowsElement> initializeWDriver() throws IOException, InterruptedException {
+		
+		 try {
+		
+		DesiredCapabilities options = new DesiredCapabilities();
+		options.setPlatform(Platform.WIN10);
+		//options.setCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
+		options.setCapability("app", "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.exe");		
+		//options.setCapability("app", "Root");
+		//options.setCapability("deviceName", "WindowsPC");
+		wdriver = new WindowsDriver<WindowsElement>(new URL("http://127.0.0.1:4723"), options);
+		wdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		 }  catch (MalformedURLException e) {
+	            e.printStackTrace();
+	        }
+		
+		 
+		//WindowsElement newEmail = wdriver.findElementByName("New E-mail");
+		  Thread.sleep(10000);
+		  Set<String> windowHandles = wdriver.getWindowHandles();
+	       List<String> windowHandlesList = new ArrayList<>(windowHandles); //Set to List Conversion
+	        //5) Write to total window handle number to the console.
+	        System.out.println("Total window number: " + windowHandlesList.size());
+	        //6) Switch to second window
+	        wdriver.switchTo().window(windowHandlesList.get(0));
+				  
+        //wdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+       // wdriver.findElementByName("To").sendKeys("<email>");
+		return wdriver;		
+	}
+	
 public static AndroidDriver<AndroidElement> initializeMobileDriver() throws MalformedURLException{
 		DesiredCapabilities cap = new DesiredCapabilities();
 		File appDir = new File("driver");

@@ -25,27 +25,29 @@ public class Web extends common {
 	
 	
 	    	
-	@Given("User clicks on Add to Cart button")
+	@Given("User searches the medicine")
 	public void addToCart() throws InterruptedException {
-		pg.getAddTOCartButton().click();
+		pg.Search().sendKeys("Dettol");
 		Thread.sleep(2000);
-		System.out.println("Clicked on Add to Cart Button");
+		pg.SearchedText().click();
+		Thread.sleep(2000);	
 				
 	}
  
-	@When("User clicks on Cart Image and Checkout button")
+	@When("User clicks on Add to Card Button")
 	public void clickCartImage() throws InterruptedException {
-		pg.getCartImage().click();
-		Thread.sleep(2000);
+		pg.AddToCartButton().click();
+		Thread.sleep(3000);
 		System.out.println("Clicked on Cart Image");
-		
-	}
+		}
  
 	@Then("Validate user is navigated to Cart details page")
 	public void Validation() throws InterruptedException {
-		pg.getCheckOutButton().click();
-		System.out.println("Clicked on Checkout Button");
-		Thread.sleep(4000);
+		pg.SelectQuantity().click();
+		Thread.sleep(3000);
+		pg.Cart().click();
+		Thread.sleep(2000);
+		
 		/*
 		log.debug("I am debugging");
 		log.error("print error message using Log4j");
@@ -53,6 +55,15 @@ public class Web extends common {
 		log.info("I am debugging info");
 		log.warn("I am warn");
 		*/
+	}
+	
+	@Then("Remove cart items")
+	public void RemoveeItems() throws InterruptedException {
+		pg.RemoveItem().click();
+		Thread.sleep(2000);
+		pg.OkButton().click();
+		Thread.sleep(3000);
+		
 	}
  
 	

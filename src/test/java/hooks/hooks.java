@@ -29,7 +29,7 @@ public class hooks extends common {
    public void setUp() throws IOException{ 
       System.out.println("Before Web Hooks");      
       driver =initializeDriver();
-      driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");	
+      driver.get("https://pharmeasy.in/");	
      }
   
    @Before("@Mobile") 
@@ -55,7 +55,7 @@ public class hooks extends common {
    public void launchWinAppDriver() throws IOException {
 	   
 
-	   String command = "C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe";
+	   String command = "C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe";
 	   ProcessBuilder builder = new ProcessBuilder(command).inheritIO();
 	   p = builder.start();
 		

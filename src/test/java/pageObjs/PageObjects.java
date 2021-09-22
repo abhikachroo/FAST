@@ -10,10 +10,13 @@ public class PageObjects {
 	
 	//All Page Objects should go here using locators
 	
-	private By AddToCartButton=By.xpath("//button[text()='ADD TO CART']");
-	private By CartImage=By.xpath("//img[@alt='Cart']");
-	private By CheckOutButton = By.xpath("//button[text()='PROCEED TO CHECKOUT']");
-
+	private By Search=By.xpath("//input[@type='text']");
+	private By SearchedText=By.xpath("//*[text()='1000ml Liquid in Bottle']");
+	private By AddToCartButton = By.xpath("//*[text()='Add To Cart']");
+	private By SelectQuantity = By.xpath("//*[@role='listbox']//li[3]");
+	private By Cart = By.xpath("//span[text()='Cart']");
+	private By RemoveItem = By.xpath("//img[@alt='close']");
+	private By OkButton = By.xpath("//div[text()='Yes']");
 
 	// This is constructor to initiate driver
 	public PageObjects(WebDriver driver) {		
@@ -23,17 +26,32 @@ public class PageObjects {
 	
 	//All getter methods for Locators
 
-	public WebElement getAddTOCartButton()
+	public WebElement Search()
+	{
+		return driver.findElement(Search);
+	}
+	public WebElement SearchedText()
+	{
+		return driver.findElement(SearchedText);
+	}
+	public WebElement AddToCartButton()
 	{
 		return driver.findElement(AddToCartButton);
 	}
-	public WebElement getCartImage()
+	public WebElement SelectQuantity()
 	{
-		return driver.findElement(CartImage);
+		return driver.findElement(SelectQuantity);
 	}
-	public WebElement getCheckOutButton()
+	public WebElement Cart()
 	{
-		return driver.findElement(CheckOutButton);
+		return driver.findElement(Cart);
 	}
-
+	public WebElement RemoveItem()
+	{
+		return driver.findElement(RemoveItem);
+	}
+	public WebElement OkButton()
+	{
+		return driver.findElement(OkButton);
+	}
 }
