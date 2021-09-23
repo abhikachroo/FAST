@@ -1,4 +1,4 @@
-@Mobile
+@Mobile1
 Feature: Mobile Andriod Application Test Scenarios
  
 @First

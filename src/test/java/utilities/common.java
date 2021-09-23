@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.WindowsElement;
 
@@ -33,6 +35,40 @@ public class common {
 	public static WindowsDriver<WindowsElement> wdriver;
 	public static AndroidDriver<AndroidElement> mdriver;
 	public static Properties prop;
+	
+	public static AppiumDriverLocalService service;
+
+	
+	public static AppiumDriverLocalService startServer()
+	{
+		//
+	boolean flag=checkIfServerIsRunnning(4723);
+	if(!flag)
+	{
+		
+		service=AppiumDriverLocalService.buildDefaultService();
+		service.start();
+	}
+		return service;
+		
+	}
+public static boolean checkIfServerIsRunnning(int port) {
+		
+		boolean isServerRunning = false;
+		ServerSocket serverSocket;
+		try {
+			serverSocket = new ServerSocket(port);
+			
+			serverSocket.close();
+		} catch (IOException e) {
+			//If control comes here, then it means that the port is in use
+			isServerRunning = true;
+		} finally {
+			serverSocket = null;
+		}
+		return isServerRunning;
+	}
+	
 	
 	public static WebDriver initializeDriver() throws IOException
 	{
@@ -85,7 +121,7 @@ public class common {
 public static WindowsDriver<WindowsElement> initializeWDriver() throws IOException, InterruptedException {
 		
 		 try {
-		
+			
 		DesiredCapabilities options = new DesiredCapabilities();
 		options.setPlatform(Platform.WIN10);
 		//options.setCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
@@ -116,10 +152,11 @@ public static WindowsDriver<WindowsElement> initializeWDriver() throws IOExcepti
 	}
 	
 public static AndroidDriver<AndroidElement> initializeMobileDriver() throws MalformedURLException{
+	    service=startServer();
 		DesiredCapabilities cap = new DesiredCapabilities();
 		File appDir = new File("driver");
 		File app=new File(System.getProperty("user.dir")+"\\driver\\ApiDemos-debug.apk");
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_Emulator");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "RZ8N91R8AAT");
 		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		AndroidDriver<AndroidElement> mdriver=new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),cap);

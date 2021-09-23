@@ -32,16 +32,27 @@ public class MobileAndroid extends common {
 	public void launchApp() throws InterruptedException {
 	System.out.println("Mobile App launched");				
 	mdriver.findElement(By.xpath("//android.widget.TextView[@text='Preference']")).click();
-	Thread.sleep(5000);
-	mdriver.findElement(By.xpath("//android.widget.TextView[@text='3. Preference dependencies']")).click();			
-	mdriver.findElement(By.id("android:id/checkbox")).click();
-    mdriver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
-    mdriver.findElement(By.className("android.widget.EditText")).sendKeys("Text Enter");
-    mdriver.findElements(By.className("android.widget.Button")).get(1).click();			
-				
+	Thread.sleep(2000);	
+    			
 						
 	}
- 
+	@When("User clicks on Preferences")
+	public void clickPreferences() throws InterruptedException {
+	
+	mdriver.findElement(By.xpath("//android.widget.TextView[@text='3. Preference dependencies']")).click();			
+		
+	}
+	
+	@Then("User enables WiFi option in App")
+	public void enableWiFi() throws InterruptedException {
+				
+	mdriver.findElement(By.id("android:id/checkbox")).click();
+    mdriver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
+    mdriver.findElement(By.className("android.widget.EditText")).sendKeys("Demo Text");
+    mdriver.findElements(By.className("android.widget.Button")).get(1).click();
+    service.stop();
+
+	}
  
 	
 }

@@ -44,16 +44,19 @@ public class Desktop extends common {
 		Set<String> windowHandles = wdriver.getWindowHandles();
 	       List<String> windowHandlesList = new ArrayList<>(windowHandles); //Set to List Conversion	
 	        wdriver.switchTo().window(windowHandlesList.get(0));
-	        Thread.sleep(2000); 	      
+	        Thread.sleep(2000); 	 
+	        wdriver.findElementByName("To").sendKeys("abhishek.kachroo@cyient.com");
 	        wdriver.findElementByAccessibilityId("4101").sendKeys("This is Test Subject");
 	   
 	        Thread.sleep(2000);
 
 		
 	}
-	@Then("Validate user can enter Message")
-	public void validateBody() throws MalformedURLException {
+	@Then("Validate user can enter and Send message")
+	public void validateBody() throws MalformedURLException, InterruptedException {
         wdriver.findElementByName("Message").sendKeys("This is Test Message Body");//4159
+        Thread.sleep(2000);
+        wdriver.findElementByName("Send").click();
        // wdriver.quit();
 	
 		 		
